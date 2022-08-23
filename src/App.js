@@ -1,19 +1,15 @@
-import personas from './data/personas.json';
-const App =() => {
-  return (
-    <div className="Box">
-      <p>React-Mendez</p>
-      {
-        personas.map(personas =>(
-          <div>
-            <p>Nomre: {personas.nombre}</p>
-            <p>Edad: {personas.edad}</p>
-          <hr /> 
-          </div>
-        ))
-      }
-    </div>
-  );
-}
+import logo from "../src/img/logo.png";
+import NavBar from "./components/NavBar";
+import "../src/style/style.css";
+const App = () => (
+  <div>
+    <img src={logo} alt=""/>
+    <NavBar />
+  </div>
+)
+
+
+
+
 
 export default App;
