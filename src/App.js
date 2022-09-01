@@ -1,12 +1,14 @@
-import ItemListContainer from "./components/ItemListContainer";
+import "../src/style/style.css";
 import CartWindget from "./components/CartWindget"
 import NavBar from "./components/NavBar";
-import "../src/style/style.css";
+import ItemListContainer from "./components/ItemListContainer";
+import ItemCount from "./components/ItemCount";
 const App = () => (
   <div>
     <CartWindget />
-    <NavBar />
     <ItemListContainer/>
+    <NavBar />
+    <ItemCount/>
   </div>
 )
 

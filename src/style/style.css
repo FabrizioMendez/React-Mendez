@@ -1,15 +1,24 @@
+/* ______________________________ */
+/* EL ESTILO DE ItemListContainer */
+
 ul {
     align-items: center;
     display: flex;
     flex-direction: row;
+    
 }
 a{
     margin-right: 40px;
     border: 2px solid black;
     background-color: antiquewhite;
+    font-size: x-large;
+    text-decoration: none;
 }
+/* _____________________________ */
+/* EL ESTILO DEL LOGO DE COMPRAS */
 img{
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 150px;
+    max-height: 150px;
     align-items: center;
 }
+/* _____________________________ */
