@@ -1,16 +1,15 @@
 import { useState } from 'react';
-import A from './A';
-import B from './B';
 
-const ItemCount = () => {
-  const [contador, setcontador] =useState(0);
+const ItemCount = (props) => {
+  const [contador, setContador] =useState(props.initial);
     return (
     <div>
-        <button onClick={()=> {setcontador(contador+1,);}}>Sumar al Carrito</button>
-    {
-        contador >= 10 ? <A/> : <B/>
-    }
+        <button onClick={()=> {if (contador > props.initial) setContador(contador-1)}}>-</button>
         {contador}
+        <button onClick={()=> {if (contador >= props.stock ){alert("NO HAY STOCK!!")}else setContador(contador+1)}}>+</button>
+        <br />
+        <button onClick={()=>props.onAdd()}>Agregar al carrito</button>
+        
     </div>
   )
 }
