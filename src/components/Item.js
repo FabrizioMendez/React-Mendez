@@ -6,7 +6,7 @@ const Item = (props) => {
       <p>{props.oneItem.producto}</p>
       <p>{props.oneItem.precio}</p>
       <p>{props.oneItem.marca}</p>
-      <ItemCount/>
+      <ItemCount stock ={5} initial ={0}/>
     </div>
   )
 }
