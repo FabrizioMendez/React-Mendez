@@ -22,3 +22,22 @@ img{
     align-items: center;
 }
 /* _____________________________ */
+/* _________________ */
+/* EL TITULO DEL LAYOUT */
+.titulo{
+    text-decoration: none;
+    color: #68da3e;
+    background-color: #6aa3b4;
+    text-align: center;
+}
+/* _______________________________ */
+.items{
+    border: solid 4px black;
+    margin: 3px;
+    width: max-content;
+}
+/* ___________________________ */
+.itemlist{
+    display: flex;
+    flex-direction: row;
+}

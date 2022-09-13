@@ -1,23 +1,13 @@
 import "../src/style/style.css";
-import CartWindget from "./components/CartWindget"
-import NavBar from "./components/NavBar";
-import ItemListContainer from "./components/ItemListContainer";
-import ItemCount from "./components/ItemCount";
+import Router from "./App/Router";
 
 
 
 
 const App = () => {
-  const onAdd = () =>{
-    console.log("se presiono el boton agregar al carrito");
-  };
-
 return(
   <div>
-    <CartWindget />
-    <ItemListContainer/>
-    <NavBar />
-    <ItemCount stock={5} initial={0} onAdd={onAdd}/>
+    <Router/>
   </div>
 );
 };

@@ -3,7 +3,7 @@ import React from 'react'
 
 const ItemList = (props) => {
     return (
-    <div>
+    <div className='itemlist'>
         {props.list.map((oneItem,indx)=>{
             return(
                 <Item key={indx} oneItem={oneItem}/>

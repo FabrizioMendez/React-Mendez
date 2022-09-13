@@ -1,8 +1,13 @@
 import React from 'react'
-
-const Item = () => {
+import ItemCount from "./ItemCount"
+const Item = (props) => {
   return (
-    <div>Item</div>
+    <div className='items'>
+      <p>{props.oneItem.producto}</p>
+      <p>{props.oneItem.precio}</p>
+      <p>{props.oneItem.marca}</p>
+      <ItemCount/>
+    </div>
   )
 }
 

@@ -1,21 +1,25 @@
 import ItemList from "./ItemList"
+import { useState } from 'react';
+// _____________________________________________
 const ItemListContainer = () => {
+  const [productos, setProductos] =useState([]);
+  // ___________________________________________
   const promesa=new Promise((resolve, reject)=>{
     setTimeout(()=>{
       resolve([
-        {prodcuto: "mouse",
+        {producto: "mouse",
         precio: 1500,
         marca:"Logitec"},
-        {prodcuto: "teclado",
+        {producto: "teclado",
         precio: 1000,
         marca:"Logitec"}
       ]);
     },2000)
   })
-  promesa.then(res => console.log(res))
+  promesa.then(res => setProductos(res))
   return (
     <div>
-        <ItemList list={[0,2,4,5,6,7]}/>
+        <ItemList list={productos}/>
     </div>
   )
 }
