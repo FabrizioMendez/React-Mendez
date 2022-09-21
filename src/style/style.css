@@ -9,18 +9,40 @@ ul {
 }
 a{
     margin-right: 40px;
-    border: 2px solid black;
-    background-color: antiquewhite;
+    background-color: #cdff00;
     font-size: x-large;
     text-decoration: none;
 }
 /* _____________________________ */
-/* EL ESTILO DEL LOGO DE COMPRAS */
-img{
+/* EL ESTILO DEL CARRITO */
+.barra{
+    display: flex;
+    flex-direction: row;
+    background-color: #cdff00;    
+}
+
+.logoF{
+    display: flex;
+    flex-wrap: wrap;
+}
+.logo{
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+}
+
+.carrito{
     max-width: 150px;
     max-height: 150px;
-    align-items: center;
 }
+
+.carritoF{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+}
+
 /* _____________________________ */
 /* _________________ */
 /* EL TITULO DEL LAYOUT */
@@ -40,4 +62,20 @@ img{
 .itemlist{
     display: flex;
     flex-direction: row;
+}
+/* ___________________________ */
+.imgItems{
+    max-width: 350px;
+    max-height: 350px;
+    align-content: center;
+}
+/* ___________________________ */
+.dataItem{
+    text-align: center;
+    align-content: center;
+}
+/* ___________________________ */
+.contadorItem{
+    text-align: center;
+    align-content: center;
 }

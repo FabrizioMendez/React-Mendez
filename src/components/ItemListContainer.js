@@ -1,3 +1,5 @@
+import mouse from "../img/mouse.jfif"
+import teclado from "../img/teclado.jpg"
 import ItemList from "./ItemList"
 import { useState } from 'react';
 // _____________________________________________
@@ -9,10 +11,12 @@ const ItemListContainer = () => {
       resolve([
         {producto: "mouse",
         precio: 1500,
-        marca:"Logitec"},
+        marca:"Logitec",
+        imagen: <img className="imgItems" src={mouse} alt=""/>},
         {producto: "teclado",
         precio: 1000,
-        marca:"Logitec"}
+        marca:"Logitec",
+        imagen: <img className="imgItems" src={teclado} alt=""/>},
       ]);
     },2000)
   })

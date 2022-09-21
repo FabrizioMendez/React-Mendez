@@ -1,8 +1,8 @@
-import carrito from "../img/carrito.png";
 const CartWindget = () => {
   return (
-    <div><img src={carrito} alt=""/></div>
+    <div>
+    </div>
   )
 }
 
-export default CartWindget
+export default CartWindget  
