@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Cart from './Cart'
 import ItemCount from './ItemCount'
-const ItemDetail = (props) => {
-    alert("Compraste, que bien !")
+const ItemDetail = () => {
+    const value = useContext(ItemCount)
+    const [cart, setCart] = value.cart
+  
+    const shopp = () => {
+      setCart(cart)
+    }
+    
   return (
     <div>
-        <ItemCount onAdd= {(props.onAdd) =>{
-            setCount();
-        }}/>
-        {/* <Link to = {"./Cart"}>Terminar compra</Link> */}
+    <ItemCount/>
     </div>
   )
 }
