@@ -1,14 +1,16 @@
 import React from 'react'
-import ItemCount from "./ItemCount"
+import { Link } from 'react-router-dom'
 const Item = (props) => {
   return (
+    <Link to = {`/detail/${props.oneItem.producto}`}>
     <div className='items'>
       <p className='dataItem'>{props.oneItem.producto}</p>
       <p className='dataItem'>{props.oneItem.precio}</p>
       <p className='dataItem'>{props.oneItem.marca}</p>
       <p className='dataItem'>{props.oneItem.imagen}</p>
-      <ItemCount stock ={5} initial ={0}/>
     </div>
+    </Link>
+    
   )
 }
 

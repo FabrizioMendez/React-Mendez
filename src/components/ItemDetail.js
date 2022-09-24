@@ -1,17 +1,14 @@
-import React, { useContext } from 'react'
-import Cart from './Cart'
 import ItemCount from './ItemCount'
+import { Link, useParams } from 'react-router-dom';
 const ItemDetail = () => {
-    const value = useContext(ItemCount)
-    const [cart, setCart] = value.cart
-  
-    const shopp = () => {
-      setCart(cart)
-    }
-    
+    const{producto} = useParams();
+    const agregarAlCarrito = ()=>{
+        alert(`agregaste al carrito ${producto}`);
+}
   return (
     <div>
-    <ItemCount/>
+    <ItemCount  stock ={5} initial ={0} onAdd = {agregarAlCarrito}/>
+    <Link to ={`/cart`}>Ir al carrito</Link>
     </div>
   )
 }
