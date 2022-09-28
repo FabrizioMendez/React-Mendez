@@ -79,3 +79,19 @@ a{
     text-align: center;
     align-content: center;
 }
+
+/* _______________________ */
+/* los items del catalogo */
+.grande{
+    border: solid 4px black;
+    margin: 3px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.chico{
+    text-align: center;
+}
+/* ______________________ */

@@ -1,30 +1,21 @@
-import mouse from "../img/mouse.jfif"
-import teclado from "../img/teclado.jpg"
-import ItemList from "./ItemList"
-import { useState } from 'react';
-// _____________________________________________
+import { AppContext } from "../App/Provider";
+import { useContext, useState } from 'react';
+
 const ItemListContainer = () => {
-  const [productos, setProductos] =useState([]);
-  // ___________________________________________
-  const promesa=new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-      resolve([
-        {producto: "mouse",
-        precio: 1500,
-        marca:"Logitec",
-        imagen: <img className="imgItems" src={mouse} alt=""/>},
-        {producto: "teclado",
-        precio: 1000,
-        marca:"Logitec",
-        imagen: <img className="imgItems" src={teclado} alt=""/>},
-      ]);
-    },2000)
-  })
-  promesa.then(res => setProductos(res))
+  const [state, setState] = useContext(AppContext);
+  
   return (
-    <div>
-        <ItemList list={productos}/>
-    </div>
+    <>
+      <div>{state.map(product => (
+        <div className="grande">
+          <div className="chico">{product.producto}</div>
+          <div className="chico">{product.precio}</div>
+          <div className="chico">{product.marca}</div>
+          <div className="chico">{product.imagen}</div>
+        </div>
+        
+      ))}</div>
+    </>
   )
 }
 

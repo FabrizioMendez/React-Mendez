@@ -1,4 +1,5 @@
 import "../src/style/style.css";
+import Provider from "./App/Provider";
 import Router from "./App/Router";
 
 
@@ -7,7 +8,9 @@ import Router from "./App/Router";
 const App = () => {
 return(
   <div>
-    <Router/>
+    <Provider>
+      <Router/>
+    </Provider>
   </div>
 );
 };
