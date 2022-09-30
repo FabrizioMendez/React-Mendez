@@ -1,15 +1,20 @@
-import Item from './Item'
 import React from 'react'
+import Item from './Item'
+import { AppContext } from "../App/Provider";
+import { useContext, useState } from 'react';
 
-const ItemList = (props) => {
+const ItemList = () => {
+    const [state, setState] = useContext(AppContext);
     return (
-    <div className='itemlist'>
-        {props.list.map((oneItem,indx)=>{
+    <>
+     <div className='itemlist'>
+        {state.map((oneItem,indx)=>{
             return(
                 <Item key={indx} oneItem={oneItem}/>
-            )
-        })}
-    </div>
+                )
+            })}
+    </div> 
+    </>
     )
 }
 
