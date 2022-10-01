@@ -89,9 +89,15 @@ a{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    
 
 }
 .chico{
     text-align: center;
 }
 /* ______________________ */
+.detalleItem{
+    align-content: center;
+    width: max-content;
+    align-self: center;
+}

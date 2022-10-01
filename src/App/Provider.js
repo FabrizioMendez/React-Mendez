@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import {createContext} from 'react'
+// ______________________________________________
 import mouse from "../img/mouse.jfif"
 import teclado from "../img/teclado.jpg"
 import microfono from "../img/microfono.png"
 import auriculares from "../img/auriculares.jpg"
 import camara from "../img/camara.jpg"
+// ______________________________________________
 const Provider = ({ children }) => {
     const [state, setState] = useState([
       {producto: "Mouse",

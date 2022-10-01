@@ -1,3 +1,4 @@
+import { Link, useParams } from 'react-router-dom';
 import { AppContext } from "../App/Provider";
 import { useContext, useState } from 'react';
 
@@ -12,9 +13,9 @@ const ItemListContainer = () => {
           <div className="chico">{product.precio}</div>
           <div className="chico">{product.marca}</div>
           <div className="chico">{product.imagen}</div>
+          <Link className='detalleItem' to ={`/detail/:producto`}>Ir al detalle</Link>
         </div>
-        
-      ))}</div>
+        ))}</div>
     </>
   )
 }
